@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.andriod.biologyquiz.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--Segment where Categories for Questions are listed-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:text="Categories"
+                android:textAllCaps="true"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroupCategories">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+
+                    android:text="Animals"
+                    android:textSize="16sp"
+
+                    android:id="@+id/radioAnimals"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+
+                    android:text="Cells"
+                    android:textSize="16sp"
+
+                    android:id="@+id/radioCells"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+
+                    android:text="Genetics"
+                    android:textSize="16sp"
+
+                    android:id="@+id/radioGenetics"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Select"
+                    android:onClick="onSelect"
+
+                    android:id="@+id/selectButton"
+                    />
+
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+        <!--Segment where Question Pops up with an Image -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Questions"
+                android:textAllCaps="true"
+                android:textSize="16dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginRight="16dp"
+                android:adjustViewBounds="true"
+
+                android:scaleType="fitXY"
+                android:id="@+id/questionImage"
+
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+
+                android:text=""
+                android:textColor="#000000"
+
+                android:id="@+id/questionDescription"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioGroupQuestions">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text=""
+                    android:textSize="16sp"
+
+                    android:id="@+id/answerChoiceA"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+
+                    android:text=""
+                    android:textSize="16sp"
+
+                    android:id="@+id/answerChoiceB"/>
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text=""
+                    android:textSize="16sp"
+
+                    android:id="@+id/answerChoiceC"/>
+
+
+            </RadioGroup>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Submit"
+                android:onClick="onSubmit"
+                android:id="@+id/submitButton"/>
+
+
+
+
+
+        </LinearLayout>
+
+        <!--Segement where shows player scores on Trivia Questions-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:id="@+id/playerOne"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+
+                android:text=""
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:id="@+id/playerTwo"/>
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:text="Restart Game"
+            android:onClick="restartApp"
+            android:clickable="true"
+           />
+
+    </LinearLayout>
+
+
+</ScrollView>
